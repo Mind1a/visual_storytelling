@@ -1,3 +1,36 @@
 *{
     color: $primary;
 }
+
+p{
+    font-family: sandro;
+    font-size: $p-font-size-regular;
+}
+
+.center-container{
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    width: 77.688rem;
+    margin: 2.688rem auto 2.313rem auto;
+    background-color: $sectionBG;
+
+    .section-header{
+        margin-top: 3.063rem;
+        margin-bottom: 1.625rem;
+        margin-right: 15.313rem;
+        font-size: 3rem;
+    }
+    .section-p{
+        width: 65rem;
+        line-height: 1.5;
+    }
+
+    .iframe{
+        width: 45.688rem;
+        height: 26.313rem;
+        margin-bottom: 5.25rem;
+        margin-top: 1.625rem;
+        object-fit: cover;
+    }
+}
