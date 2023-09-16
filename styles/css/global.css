@@ -138,8 +138,43 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: sandro;
+  src: url(../../assets/fonts/Sandro-Regular.ttf);
+}
 * {
   color: #163A57;
+}
+
+p {
+  font-family: sandro;
+  font-size: 1.25rem;
+}
+
+.center-container {
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  width: 77.688rem;
+  margin: 2.688rem auto 2.313rem auto;
+  background-color: #F0F0F0;
+}
+.center-container .section-header {
+  margin-top: 3.063rem;
+  margin-bottom: 1.625rem;
+  margin-right: 15.313rem;
+  font-size: 3rem;
+}
+.center-container .section-p {
+  width: 65rem;
+  line-height: 1.5;
+}
+.center-container .iframe {
+  width: 45.688rem;
+  height: 26.313rem;
+  margin-bottom: 5.25rem;
+  margin-top: 1.625rem;
+  object-fit: cover;
 }
 
 header {
