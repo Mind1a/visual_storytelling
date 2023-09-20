@@ -1,13 +1,28 @@
-*{
+* {
     color: $primary;
 }
 
-p{
+html {
+    overflow-x: hidden;
+}
+
+p {
     font-family: sandro;
     font-size: $p-font-size-regular;
 }
 
-.center-container{
+h2,
+h3 {
+    font-family: mtavruli;
+}
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.center-container {
     display: flex;
     align-items: center;
     flex-flow: column nowrap;
@@ -15,18 +30,19 @@ p{
     margin: 2.688rem auto 2.313rem auto;
     background-color: $sectionBG;
 
-    .section-header{
+    .section-header {
         margin-top: 3.063rem;
         margin-bottom: 1.625rem;
         margin-right: 15.313rem;
         font-size: 3rem;
     }
-    .section-p{
+
+    .section-p {
         width: 65rem;
         line-height: 1.5;
     }
 
-    .iframe{
+    .iframe {
         width: 45.688rem;
         height: 26.313rem;
         margin-bottom: 5.25rem;
@@ -34,3 +50,117 @@ p{
         object-fit: cover;
     }
 }
+
+.game {
+    width: 100%;
+    margin-top: 2.563rem;
+
+    .PoS {
+        //Parts of Speech
+        display: flex;
+        align-items: stretch;
+        width: fit-content;
+        height: 5.688rem;
+        border-top-right-radius: 1.5rem;
+        background: linear-gradient(90deg, $postpositions 50%, $verbs 50%);
+    }
+
+    .part {
+        //Part of Speech
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
+        flex-flow: row nowrap;
+        height: 100%;
+        padding: 0 0.938rem;
+        font-size: 1.563rem;
+        border-top-right-radius: 1.5rem;
+
+        .icon {
+            width: 4.563rem;
+            height: 4.563rem;
+            background-color: darkblue;
+            border-radius: 0.5rem;
+        }
+    }
+
+    .nouns {
+        background: $nouns;
+    }
+
+    .postpositions {
+
+        background: $postpositions;
+    }
+
+    .verbs {
+
+        background: $verbs;
+    }
+    .nouns, .postpositions, .verbs, .finish{
+        font-family: mtavruli;
+        font-weight: bold;
+    }
+
+    .sentence{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: 2.813rem;
+        width: 100%;
+        height: 33.125rem;
+        padding-top: 2.063rem;
+        background-color: $sectionBG;
+    
+        .word{
+            width: 18.25rem;
+            height: 16.5rem;
+            background: $words;
+            border: 1px solid $words-border;
+            border-radius: 1.125rem;
+        }
+        .finish{
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 1.188rem 1.125rem 0.481rem 1.125rem;
+            color: $navBG;
+            font-size: 2.688rem;
+            border-radius: 0.813rem;
+            background-color: $btnBG;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.carousel{
+    width: 100%;
+    height: 12.813rem;
+    position: relative;
+    padding: 1.906rem 0;
+    background-color: $nouns;
+
+    .swiper {
+        width: 90%;
+        height: 100%;
+
+        .swiper-slide {
+            width: 10rem;
+            height: 100%;
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $verbs;
+            border-radius: 0.75rem;
+            cursor: grab;
+
+        }
+    }
+}
+
+
