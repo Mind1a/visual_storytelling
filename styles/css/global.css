@@ -187,10 +187,15 @@ h3 {
   margin-bottom: 1.625rem;
   margin-right: 15.313rem;
   font-size: 3rem;
+  font-weight: bold;
 }
 .center-container .section-p {
   width: 65rem;
   line-height: 1.5;
+}
+.center-container .section-p.small {
+  font-size: 0.875rem;
+  margin-bottom: 10.375rem;
 }
 .center-container .iframe {
   width: 45.688rem;
