@@ -22,7 +22,7 @@ draggables.forEach(item => {
 });
 
     dragDiv.addEventListener('dragover', (e) => {
-        e.preventDefault(); //kursori
+        e.preventDefault();
     });
 
     // dragDiv.addEventListener('drop', (e) => {
