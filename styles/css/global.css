@@ -169,9 +169,9 @@ h3 {
 }
 
 .prevent-select {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+  -webkit-user-select: none; /* Safari */ /* IE 10 and IE 11 */
+  -moz-user-select: none;
+       user-select: none; /* Standard syntax */
 }
 
 .center-container {
@@ -202,7 +202,8 @@ h3 {
   height: 26.313rem;
   margin-bottom: 5.25rem;
   margin-top: 1.625rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .game {
@@ -212,6 +213,7 @@ h3 {
 .game .PoS {
   display: flex;
   align-items: stretch;
+  width: -moz-fit-content;
   width: fit-content;
   height: 5.688rem;
   border-top-right-radius: 1.5rem;
@@ -219,8 +221,8 @@ h3 {
 }
 .game .part {
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
   gap: 1rem;
   flex-flow: row nowrap;
   height: 100%;
@@ -258,11 +260,15 @@ h3 {
   background-color: #F0F0F0;
 }
 .game .sentence .word {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 18.25rem;
   height: 16.5rem;
   background: #AAAAAA;
   border: 1px solid #707070;
   border-radius: 1.125rem;
+  overflow: hidden;
 }
 .game .sentence .finish {
   position: absolute;
@@ -289,13 +295,13 @@ h3 {
   height: 100%;
 }
 .carousel .swiper .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 10rem;
   height: 100%;
   text-align: center;
   font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #B4B4B4;
   border-radius: 0.75rem;
   cursor: grab;
@@ -350,6 +356,4 @@ footer {
 footer img {
   height: 5.167rem;
   margin-right: 1.333rem;
-}
-
-/*# sourceMappingURL=global.css.map */
+}/*# sourceMappingURL=global.css.map */
