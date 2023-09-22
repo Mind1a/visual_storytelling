@@ -72,7 +72,10 @@ h3 {
 
     .part {
         //Part of Speech
-        @include flex(space-around, 1rem, center);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
         flex-flow: row nowrap;
         height: 100%;
         padding: 0 0.938rem;
@@ -107,18 +110,23 @@ h3 {
 
     .sentence{
         position: relative;
-        @include flex(center, 2.813rem, null);
+        display: flex;
+        justify-content: center;
+        gap: 2.813rem;
         width: 100%;
         height: 33.125rem;
         padding-top: 2.063rem;
         background-color: $sectionBG;
     
         .word{
+            @include flex(center, null, center);
             width: 18.25rem;
             height: 16.5rem;
             background: $words;
             border: 1px solid $words-border;
             border-radius: 1.125rem;
+            overflow: hidden;
+
         }
         .finish{
             position: absolute;
@@ -148,15 +156,16 @@ h3 {
         height: 100%;
 
         .swiper-slide {
-            @include flex(center, null, center);
             width: 10rem;
             height: 100%;
             text-align: center;
             font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-color: $verbs;
             border-radius: 0.75rem;
             cursor: grab;
-
         }
     }
 }
