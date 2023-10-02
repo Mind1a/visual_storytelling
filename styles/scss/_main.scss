@@ -156,8 +156,9 @@ h3 {
         height: 100%;
 
         .swiper-slide {
-            width: 10rem;
+            width: 9.938rem !important;
             height: 100%;
+            margin-right: 2.5rem;
             text-align: center;
             font-size: 18px;
             display: flex;

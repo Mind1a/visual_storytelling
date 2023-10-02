@@ -28,8 +28,8 @@ dragDiv.addEventListener('drop', (e) => {
     e.preventDefault();
     
     if (draggedItem) {
-        // draggedItem.style.margin = '2.5rem'
-        // draggedItem.style.width = '9.688rem'
+        draggedItem.style.marginRight = '2.5rem'
+        draggedItem.style.width = '9.938rem'
         dragDiv.append(draggedItem);
     }
 });
