@@ -142,13 +142,36 @@ table {
   font-family: sandro;
   src: url(../../assets/fonts/Sandro-Regular.ttf);
 }
+@font-face {
+  font-family: BPG;
+  src: url(../../assets/fonts/bpg_arial_2009.ttf);
+}
+@font-face {
+  font-family: mtavruli;
+  src: url(../../assets/fonts/bpg-nino-mtavruli-webfont.ttf);
+}
 * {
   color: #163A57;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 p {
   font-family: sandro;
   font-size: 1.25rem;
+}
+
+h2,
+h3 {
+  font-family: mtavruli;
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */ /* IE 10 and IE 11 */
+  -moz-user-select: none;
+       user-select: none; /* Standard syntax */
 }
 
 .center-container {
@@ -164,17 +187,125 @@ p {
   margin-bottom: 1.625rem;
   margin-right: 15.313rem;
   font-size: 3rem;
+  font-weight: bold;
 }
 .center-container .section-p {
   width: 65rem;
   line-height: 1.5;
+}
+.center-container .section-p.small {
+  font-size: 0.875rem;
+  margin-bottom: 10.375rem;
 }
 .center-container .iframe {
   width: 45.688rem;
   height: 26.313rem;
   margin-bottom: 5.25rem;
   margin-top: 1.625rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.game {
+  width: 100%;
+  margin-top: 2.563rem;
+}
+.game .PoS {
+  display: flex;
+  align-items: stretch;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 5.688rem;
+  border-top-right-radius: 1.5rem;
+  background: linear-gradient(90deg, #C9C9C9 50%, #B4B4B4 50%);
+}
+.game .part {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-flow: row nowrap;
+  height: 100%;
+  padding: 0 0.938rem;
+  font-size: 1.563rem;
+  border-top-right-radius: 1.5rem;
+}
+.game .part .icon {
+  width: 4.563rem;
+  height: 4.563rem;
+  background-color: darkblue;
+  border-radius: 0.5rem;
+}
+.game .nouns {
+  background: #DEDEDE;
+}
+.game .postpositions {
+  background: #C9C9C9;
+}
+.game .verbs {
+  background: #B4B4B4;
+}
+.game .nouns, .game .postpositions, .game .verbs, .game .finish {
+  font-family: mtavruli;
+  font-weight: bold;
+}
+.game .sentence {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 2.813rem;
+  width: 100%;
+  height: 33.125rem;
+  padding-top: 2.063rem;
+  background-color: #F0F0F0;
+}
+.game .sentence .word {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18.25rem;
+  height: 16.5rem;
+  background: #AAAAAA;
+  border: 1px solid #707070;
+  border-radius: 1.125rem;
+  overflow: hidden;
+}
+.game .sentence .finish {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1.188rem 1.125rem 0.481rem 1.125rem;
+  color: #CFCFCF;
+  font-size: 2.688rem;
+  border-radius: 0.813rem;
+  background-color: #0060AD;
+  cursor: pointer;
+}
+
+.carousel {
+  width: 100%;
+  height: 12.813rem;
+  position: relative;
+  padding: 1.906rem 0;
+  background-color: #DEDEDE;
+}
+.carousel .swiper {
+  width: 90%;
+  height: 100%;
+}
+.carousel .swiper .swiper-slide {
+  width: 9.938rem !important;
+  height: 100%;
+  margin-right: 2.5rem;
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #B4B4B4;
+  border-radius: 0.75rem;
+  cursor: grab;
 }
 
 header {
@@ -186,7 +317,7 @@ header {
   background: #CFCFCF;
 }
 header img {
-  height: 87%;
+  height: 100%;
   align-self: center;
 }
 header nav {
@@ -217,8 +348,6 @@ header nav ul li:not(:last-child)::after {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
   height: 7.438rem;
   width: 100vw;
   padding-left: 1.25rem;
@@ -228,6 +357,4 @@ footer {
 footer img {
   height: 5.167rem;
   margin-right: 1.333rem;
-}
-
-/*# sourceMappingURL=global.css.map */
+}/*# sourceMappingURL=global.css.map */
